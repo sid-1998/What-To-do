@@ -19,7 +19,8 @@
 
     <ol>
       {% for item in list %}
-          <li>{{item.text}}
+          <li>
+          <a {% if item.report %} href="{{ item.report.url }}" {% else %} href="#" {% endif %}>{{item.text}}</a>
           {{item.created_at}}
           <a href="{% url 'delete' pk=item.pk %}"><i class="fas fa-times"></i></a></li>
 

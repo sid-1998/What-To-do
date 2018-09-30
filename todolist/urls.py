@@ -19,5 +19,6 @@ from app import views
 urlpatterns = [
     url(r'^$',views.index,name='index'),
     url(r'^delete/(?P<pk>\d+)/$',views.delete,name='delete'),
+    
     url(r'^admin/', admin.site.urls),
 ]
